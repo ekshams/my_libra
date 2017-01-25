@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!hy4+@%eyymgmk9xb4jmroj9#5z+fe*mhc211*g159ssh2abyp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
+DEBUG = False
 # DEBUG = True
 
 # ALLOWED_HOSTS = []
@@ -80,8 +80,11 @@ WSGI_APPLICATION = 'mylibrary.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ekshams$default',
+        'USER': 'ekshams',
+        'PASSWORD': 'shams_313',
+        'HOST': 'ekshams.mysql.pythonanywhere-services.com',
     }
 }
 
