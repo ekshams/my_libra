@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="row">
+    <div class="col-md-4">
+    <h1>{{ title }}</h1>
+    {% if confirm_message %}
+        <p>{{ confirm_message }}</p>
+    {% endif %}
+    {% if not confirm_message %}
+    <form name="book_form" action="" method="post"> {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Save" class="btn btn-primary">
+    <a href="{% url 'home' %}" class="btn btn-default">Cancel</a>
+    </form>
+    {% endif %}
+    </div>
+    </div>
+{% endblock  %}

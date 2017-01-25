@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="page-header">
+        <h2>Available Books</h2>
+    </div>
+{% endblock %}
+{% block body %}
+    <div class="row">
+    {% for book in books %}
+        <div class="img">
+            <a target="_blank" href="forest.jpg">
+                <img src="{{ book.book_image.url }}" width="300" height="200">
+            </a>
+            <div class="desc">
+                <h3>{{ book.author_name }}</h3>
+                <h4>Rs: {{ book.price }}</h4>
+                <h2 align="center" style="border-top: 1px solid grey; padding: 3px" >
+                    <a href="{% url 'book-delete' book.id %}"><i class="fa fa-trash"></i></a>
+                    <a href="{% url 'book-update' book.id %}"><i class="fa fa-edit"></i></a>
+                </h2>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+{

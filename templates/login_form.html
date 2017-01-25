@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="page-header">
+        <h2 align="center">Sign in</h2>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="col-lg-offset-4 col-lg-4 container" style="background-color: #dcdcdc ; padding: 30px;">
+        <form name="login_form" class="form-signin" action="" method="post" enctype="multipart/form-data"> {% csrf_token %}
+            {{ form|crispy }}
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+{% endblock %}
+

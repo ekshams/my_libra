@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>{{ book.name }} - My Library</title>
+</head>
+<body bgcolor="#7fffd4">
+<center><h2><u>Book Details</u></h2></center>
+<table cellpadding="10" align="center">
+        <tr>
+            <td>Name of book:</td><td><input type="text" name="name" value="{{ book.name }}"></td>
+        </tr>
+        <tr>
+            <td>Author of book:</td><td><input type="text" name="author" value="{{ book.author_name }}"></td>
+        </tr>
+        <tr>
+            <td>Subject of book:</td><td><input type="text" name="subject" value="{{ book.subject }}"></td>
+        </tr>
+        <tr><td></td>
+            <td><input type="submit" name="save" value="Save changes">
+            | <a href="/">Home</a>
+        </tr>
+</table>
+
+</body>
+</html>
