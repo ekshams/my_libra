@@ -8,7 +8,7 @@
     <div class="row">
     {% for book in books %}
         <div class="col-lg-4 img">
-            <a target="_blank" href="forest.jpg">
+            <a target="_blank" href="{{ book.book_image.url }}">
                 <img src="{{ book.book_image.url }}" width="300" height="200">
             </a>
             <div class="desc">
