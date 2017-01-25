@@ -80,11 +80,8 @@ WSGI_APPLICATION = 'mylibrary.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ekshams$default',
-        'USER': 'ekshams',
-        'PASSWORD': 'shams_313',
-        'HOST': 'ekshams.mysql.pythonanywhere-services.com',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
